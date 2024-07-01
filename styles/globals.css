@@ -56,9 +56,6 @@ h1 {
   border-radius: 1.25rem;
 }
 
-.whitespace-pre-wrap {
-}
-
 .whitespace-pre-wrap.user {
   padding-bottom: 1rem;
   font-weight: 500;
@@ -67,14 +64,10 @@ h1 {
 
 .whitespace-pre-wrap.ai {
   padding-bottom: 2rem;
-
 }
 
 .ai-chat-input {
   transform: translateX(-1rem);
-}
-
-input {
   color: #000;
 }
 
