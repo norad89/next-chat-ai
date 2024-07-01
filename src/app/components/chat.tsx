@@ -6,22 +6,25 @@ export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
   
   return (
-    <div className="flex flex-col w-full max-w-md py-24 mx-auto stretch">
-      {messages.map(m => (
-        <div key={m.id} className="whitespace-pre-wrap">
-          {m.role === 'user' ? 'User: ' : 'AI: '}
-          {m.content}
-        </div>
-      ))}
+    <div id="aiChat">
+      <h1 className="title">Next Chat AI</h1>
+      <div className="ai-chat-body flex flex-col w-full max-w-3xl p-4 mx-auto stretch">
+        {messages.map(m => (
+          <div key={m.id} className={`whitespace-pre-wrap ${m.role === 'user' ? 'user' : 'ai'}`}>
+            {m.role === 'user' ? 'User: ' : 'AI: '}
+            {m.content}
+          </div>
+        ))}
 
-      <form onSubmit={handleSubmit}>
-        <input
-          className="fixed bottom-0 w-full max-w-md p-2 mb-8 border border-gray-300 rounded shadow-xl"
-          value={input}
-          placeholder="Say something..."
-          onChange={handleInputChange}
-        />
-      </form>
+        <form onSubmit={handleSubmit}>
+          <input
+            className="ai-chat-input fixed bottom-0 w-full max-w-3xl p-2 mb-8 border border-gray-300 rounded shadow-xl"
+            value={input}
+            placeholder="Benvenuto in Next Chat AI! Scrivi qualcosa per iniziare..."
+            onChange={handleInputChange}
+          />
+        </form>
+      </div>
     </div>
   );
 }

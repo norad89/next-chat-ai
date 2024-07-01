@@ -1,0 +1,92 @@
+@import url("./fonts.css");
+
+.ClashDisplayVariable {
+  font-family: ClashDisplay-Variable;
+  font-weight: 400;
+  font-style: normal;
+	font-stretch: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  @apply ClashDisplayVariable;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background-image: url('/bg_img.jpg');
+  background-size: cover;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.title {
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+
+.ai-chat-body {
+  border: 1px solid black;
+  height: 60vh;
+  overflow-y: auto;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  border-radius: 1.25rem;
+}
+
+.whitespace-pre-wrap {
+}
+
+.whitespace-pre-wrap.user {
+  padding-bottom: 1rem;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.whitespace-pre-wrap.ai {
+  padding-bottom: 2rem;
+
+}
+
+.ai-chat-input {
+  transform: translateX(-1rem);
+}
+
+input {
+  color: #000;
+}
+
+@layer base {
+  html {
+    @apply ClashDisplayVariable;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
