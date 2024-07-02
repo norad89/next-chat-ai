@@ -4,7 +4,7 @@ import { useChat } from 'ai/react';
 
 export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
-  
+
   return (
     <div id="aiChat">
       <h1 className="title">Next.js AI Chat - OpenAI</h1>
