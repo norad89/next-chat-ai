@@ -44,7 +44,7 @@ h1 {
 
 .ai-chat-body {
   border: 1px solid black;
-  height: 60vh;
+  height: 65vh;
   overflow-y: auto;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -57,13 +57,20 @@ h1 {
 }
 
 .whitespace-pre-wrap.user {
-  padding-bottom: 1rem;
-  font-weight: 500;
-  font-size: 18px;
+  background-color: rgb(119, 164, 144);
+  margin-left: auto;
 }
 
 .whitespace-pre-wrap.ai {
-  padding-bottom: 2rem;
+  background-color: rgb(159, 205, 239);
+  margin-right: auto;
+}
+
+.whitespace-pre-wrap{
+  max-width: 90%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 1.25rem;
 }
 
 .ai-chat-input {

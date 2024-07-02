@@ -11,7 +11,7 @@ export default function Chat() {
       <div className="ai-chat-body flex flex-col w-full max-w-3xl p-4 mx-auto stretch">
         {messages.map(m => (
           <div key={m.id} className={`whitespace-pre-wrap ${m.role === 'user' ? 'user' : 'ai'}`}>
-            {m.role === 'user' ? 'User: ' : 'AI: '}
+            {m.role === 'user' ? 'Utonto: ' : 'Intelligenzo: '}
             {m.content}
           </div>
         ))}
