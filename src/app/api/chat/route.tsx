@@ -1,3 +1,5 @@
+/* This is the route file for the basic OpenAI chat API */
+
 import { openai } from '@ai-sdk/openai';
 import { StreamingTextResponse, streamText } from 'ai';
 

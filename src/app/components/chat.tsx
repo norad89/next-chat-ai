@@ -1,17 +1,33 @@
 'use client';
 
 import { useChat } from 'ai/react';
+import { useRef, useEffect } from 'react'
 
 export default function Chat() {
-  const { messages, input, handleInputChange, handleSubmit } = useChat();
+  const { messages, input, handleInputChange, handleSubmit } = useChat(
+    {
+      api: 'api/langchain',
+      onError: (e) => {
+        console.log(e)
+      }
+    }
+  );
+
+  const chatParent = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+      const domNode = chatParent.current
+      if (domNode) {
+          domNode.scrollTop = domNode.scrollHeight
+      }
+  })
 
   return (
     <div id="aiChat">
       <h1 className="title">Next.js AI Chat - OpenAI</h1>
-      <div className="ai-chat-body flex flex-col w-full max-w-3xl p-4 mx-auto stretch">
+      <div ref={chatParent} className="ai-chat-body flex flex-col w-full max-w-3xl p-4 mx-auto stretch">
         {messages.map(m => (
           <div key={m.id} className={`whitespace-pre-wrap ${m.role === 'user' ? 'user' : 'ai'}`}>
-            {m.role === 'user' ? 'Utonto: ' : 'Intelligenzo: '}
             {m.content}
           </div>
         ))}
