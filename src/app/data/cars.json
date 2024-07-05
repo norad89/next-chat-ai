@@ -1,0 +1,102 @@
+[
+  {
+    "modello": "Fiat 500",
+    "anno_produzione": 2021,
+    "costo_euro": 16000,
+    "consumi_litri_per_100_km": 5.1,
+    "tipo_carburante": "Benzina",
+    "potenza_kw": 51,
+    "posti": 4,
+    "colore": "Rosso"
+  },
+  {
+    "modello": "Volkswagen Golf",
+    "anno_produzione": 2022,
+    "costo_euro": 27000,
+    "consumi_litri_per_100_km": 4.8,
+    "tipo_carburante": "Diesel",
+    "potenza_kw": 85,
+    "posti": 5,
+    "colore": "Blu"
+  },
+  {
+    "modello": "Tesla Model 3",
+    "anno_produzione": 2023,
+    "costo_euro": 45000,
+    "consumi_kWh_per_100_km": 14.8,
+    "tipo_carburante": "Elettrico",
+    "potenza_kw": 150,
+    "posti": 5,
+    "colore": "Bianco"
+  },
+  {
+    "modello": "Toyota Corolla",
+    "anno_produzione": 2021,
+    "costo_euro": 22000,
+    "consumi_litri_per_100_km": 5.6,
+    "tipo_carburante": "Ibrido",
+    "potenza_kw": 72,
+    "posti": 5,
+    "colore": "Grigio"
+  },
+  {
+    "modello": "BMW Serie 3",
+    "anno_produzione": 2022,
+    "costo_euro": 40000,
+    "consumi_litri_per_100_km": 6.3,
+    "tipo_carburante": "Benzina",
+    "potenza_kw": 110,
+    "posti": 5,
+    "colore": "Nero"
+  },
+  {
+    "modello": "Audi A4",
+    "anno_produzione": 2023,
+    "costo_euro": 42000,
+    "consumi_litri_per_100_km": 5.5,
+    "tipo_carburante": "Diesel",
+    "potenza_kw": 100,
+    "posti": 5,
+    "colore": "Argento"
+  },
+  {
+    "modello": "Mercedes-Benz Classe A",
+    "anno_produzione": 2021,
+    "costo_euro": 35000,
+    "consumi_litri_per_100_km": 5.0,
+    "tipo_carburante": "Benzina",
+    "potenza_kw": 85,
+    "posti": 5,
+    "colore": "Bianco"
+  },
+  {
+    "modello": "Ford Focus",
+    "anno_produzione": 2022,
+    "costo_euro": 24000,
+    "consumi_litri_per_100_km": 5.9,
+    "tipo_carburante": "Diesel",
+    "potenza_kw": 74,
+    "posti": 5,
+    "colore": "Blu"
+  },
+  {
+    "modello": "Honda Civic",
+    "anno_produzione": 2023,
+    "costo_euro": 26000,
+    "consumi_litri_per_100_km": 6.1,
+    "tipo_carburante": "Benzina",
+    "potenza_kw": 95,
+    "posti": 5,
+    "colore": "Rosso"
+  },
+  {
+    "modello": "Peugeot 208",
+    "anno_produzione": 2021,
+    "costo_euro": 18000,
+    "consumi_litri_per_100_km": 5.4,
+    "tipo_carburante": "Diesel",
+    "potenza_kw": 55,
+    "posti": 5,
+    "colore": "Giallo"
+  }
+]

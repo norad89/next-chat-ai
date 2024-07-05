@@ -13,10 +13,24 @@ import { formatDocumentsAsString } from 'langchain/util/document';
 // to use for a JSON object instead of a file
 // import { CharacterTextSplitter } from 'langchain/text_splitter';
 
-const loader = new JSONLoader(
-  "src/data/states.json",
-  ["/state", "/code", "/nickname", "/website", "/admission_date", "/admission_number", "/capital_city", "/capital_url", "/population", "/population_rank", "/constitution_url", "/twitter_url"],
-);
+// const statesLoader = new JSONLoader(
+//   "src/app/data/states.json",
+//   ["/state", "/code", "/nickname", "/website", "/admission_date", "/admission_number", "/capital_city", "/capital_url", "/population", "/population_rank", "/constitution_url", "/twitter_url"],
+// );
+
+const carsLoader = new JSONLoader(
+    "src/app/data/cars.json",
+    [
+      "/modello",
+      "/anno_produzione",
+      "/costo",
+      "/consumi_litri_per_100_km",
+      "/tipo_carburante",
+      "/potenza_kw",
+      "/posti",
+      "/colore"
+    ],
+  );
 
 export const dynamic = 'force-dynamic'
 
@@ -28,8 +42,12 @@ const formatMessage = (message: VercelChatMessage) => {
   return `${message.role}: ${message.content}`;
 };
 
-const TEMPLATE = `Answer the user's questions based only on the following context.
-If the answer is not in the context, reply politely that you do not have that information available.:
+const TEMPLATE = `Your role is to suggest the car that best fits the user.
+Answer the user's questions based only on the following context, and getting data from the user
+provide the best option. If the user greets you in a specific language, answer in that language.
+If the answer is not in the context, try to elaborate with the information you have available.
+If you can't elaborate or the question isn't about cars,
+reply politely that you do not have that information available.:
 ==============================
 Context: {context}
 ==============================
@@ -48,7 +66,7 @@ export async function POST(req: Request) {
 
       const currentMessageContent = messages[messages.length - 1].content;
 
-      const docs = await loader.load();
+      const docs = await carsLoader.load();
 
         // load a JSON object
         // const textSplitter = new CharacterTextSplitter();
